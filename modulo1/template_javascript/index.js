@@ -67,7 +67,8 @@ function soma(){
     const result = (numero1 + numero2)
     console.log(result)
 }
-// soma()
+ soma()
+
 
 //B.
 let number1 = prompt('Digite o 1 numero')
