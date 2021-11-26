@@ -69,6 +69,7 @@ function soma(){
 }
  soma()
 
+
 //B.
 let number1 = prompt('Digite o 1 numero')
 let number2 = prompt('Digite o 1 numero')
