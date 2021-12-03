@@ -46,6 +46,7 @@ while(quantidadeAtual < quantidadeTotal){
 //1.
 let pets = Number(prompt("Digite a quantidade de Pets."))
 let arrayPets = []
+let DePets
 
 if (pets == 0) {
   console.log('Que pena, você pode comprar um pet!')
@@ -53,9 +54,9 @@ if (pets == 0) {
 }
 else if (pets > 0){
   
-for (let numeroDePets = 0; numeroDePets < pets; numeroDePets++) {
+for (let nomesPets = 0; nomesPets < pets; nomesPets ++) {
   const DePets = prompt("Quais os nomes dos seus Pets?")
-  arrayPets.push.toString(numeroDePets)
+  arrayPets.push(DePets)
 
   }
 }
