@@ -1,0 +1,47 @@
+
+header {
+    padding: 10px;
+    text-align: right;
+    justify-content: space-between;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+}
+
+  .menu ul li {
+    display: inline;
+    list-style: none;
+    
+  }
+  
+  .menu ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(12, 12, 11);
+  }
+
+.Títulos {
+    display: block;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 225);
+    font-size: larger;
+    padding: 250px;
+}
+
+.sobre-mim {
+    padding: 60px 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: grey;
+}
+
+section {
+    background-color: rgb(3, 11, 83);
+    height: 100vh; 
+    justify-content: space-between;
+    
+}
+
+h2{
+    font-size: small;
+}
