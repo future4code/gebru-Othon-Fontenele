@@ -1,0 +1,75 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(95, 0, 0);
+    color: rgb(243, 235, 235);
+    
+}
+
+#pesquisaMusicas {
+    padding-right: 15px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:191px;
+}
+
+#btnBusca{
+    border:none;
+    float:left;
+    height:32px;
+    border-radius:0 7px 7px 0;
+    width:70px;
+    font-weight:bold;
+    background:#eff3f3;
+  }
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 50px;
+
+}
+
+video {
+    height: 150px;
+}
+
+.irlanda {
+    display: grid;
+    grid-template-columns: 1fr, 200px;
+    justify-content: space-between;
+    grid-gap: 20px;
+    max-width: 800px;
+    padding: 10px;
+    margin-left: 10px;
+  
+}
+
+.sidebar {
+    justify-content: right;
+    margin-right: 10px;
+
+}
+video#irlanda {
+    margin-left: 10px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+
+p {
+    font-family:fantasy;
+    font-size: 20px;
+}
+
+
+footer {
+    display: flex;
+    justify-content:center;
+    padding: 10px;
+    background-color: rgb(95, 0, 0);
+    color: rgb(243, 235, 235);
+    
+}
