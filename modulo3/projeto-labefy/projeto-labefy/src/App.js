@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import axios from "axios"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export default class App extends React.Component {
+    state = {
+      listaAtual: ""
+    }
+    
+    componentDidMount() {
+      this.listaAtual();
+    }
+
+    pegaMusica = () => {
+      const url = "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists"
+      const body = 
+        {
+          "result": {
+              "quantity": "number",
+              "list": [
+                  {
+                      "id": "string",
+                      "name": "string"
+                  }
+              ]
+          }
+      }
+      
+      
+      axios.get(url, body, {
+        Authorization: "othon-fontenele-gebru"
+      })
+      .then((res) => this.setState({listaAtual: res.data.activity}))
+      .catch((err) => console.log(err.response));
+    }
+
+
+
+  render() {
+    return 
+    <div className='Labefy'>
+      {this.state.listaAtual}
     </div>
-  );
+  }
+
 }
 
-export default App;
+
