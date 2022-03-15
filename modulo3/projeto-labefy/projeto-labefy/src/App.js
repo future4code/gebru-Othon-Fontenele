@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
 import axios from "axios"
+import styled from 'styled-components';
 
 export default class App extends React.Component {
     state = {
       listaAtual: ""
     }
-    
+
     componentDidMount() {
       this.listaAtual();
     }
@@ -33,7 +34,6 @@ export default class App extends React.Component {
       .then((res) => this.setState({listaAtual: res.data.activity}))
       .catch((err) => console.log(err.response));
     }
-
 
 
   render() {
