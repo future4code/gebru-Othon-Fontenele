@@ -1,9 +1,9 @@
 const alimentos = [
-    {nome: ""},
-    {volume: ""},
-    {preço: ""},
-    {dataValidade: ""},
-    {quantidade: ""}
+    {nome: "Feijao"},
+    {volume: "3"},
+    {preço: "2,50"},
+    {dataValidade: "20/10/2025"},
+    {quantidade: "10"}
 
 ]
 
@@ -30,6 +30,16 @@ const inicio = () => {
         }
         else if (a == "compra") {
             const compra = prompt("Qual tipo de produto deseja comprar?")
+                if (compra == "alimentos" || compra == "brinquedos") {
+                    const produto = prompt("Qual o produto?")
+                   
+                        console.log(alimentos.find((element) => { element == produto
+                        }))
+                    
+                }
+                else {
+                    window.alert("Por favor, digite apenas Alimentos ou brinquedos.")
+                }
         }
 }
 inicio();
