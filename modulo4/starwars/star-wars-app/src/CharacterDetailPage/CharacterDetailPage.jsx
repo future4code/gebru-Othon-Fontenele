@@ -1,8 +1,12 @@
 import React from "react";
 
-const CharacterDetailPage = () => {
+const CharacterDetailPage = (props) => {
     return (
-        <h1>Detalhes dos Personagens</h1>
+        <div>
+            <h1>Detalhes dos Personagens</h1>
+            <p>{props.url}</p>
+            <button onClick={props.goToListPage}>Voltar</button>
+        </div>
     )
 }
 

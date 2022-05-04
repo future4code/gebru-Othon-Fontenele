@@ -7,13 +7,24 @@ import CharacterDetailPage from "./CharacterDetailPage/CharacterDetailPage";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("list")
+  const [detailsUrl, setDetailsUrl] = useState("")
+
+
+  const goToDetailsPage = (url) => {
+      setCurrentPage("details")
+      setDetailsUrl(url)
+  }
+
+  const goToListPage = () => {
+      setCurrentPage("list")
+  }
 
   const selecionaPagina = () => {
     if (currentPage === "list") {
-      return <CharacterListPage />
+      return <CharacterListPage goToDetailsPage={goToDetailsPage}/>
     } 
     else{
-      return <CharacterDetailPage/>
+      return <CharacterDetailPage goToListPage={goToListPage} url={detailsUrl} />
     }
   }
   return (
