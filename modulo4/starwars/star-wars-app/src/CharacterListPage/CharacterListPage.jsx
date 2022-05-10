@@ -1,19 +1,12 @@
-import axios from 'axios';
-import styled from 'styled-components';
 import React, { useState, useEffect } from 'react';
-import { BASE_URL } from '../constants/url';
 import { CharacterCard } from './styled'
+import { getCharacterList } from '../services/request';
 
 const CharacterListPage = (props) => {
     const [characterList, setCharacterList] = useState([])
 
-    const getCharacterList = () => {
-        axios.get(`${BASE_URL}/people/`)
-        .then((response) => setCharacterList(response.data.results))
-        .catch((error) => console.log("Erro:", error.message))
-    }
-     useEffect(() =>{
-         getCharacterList()
+    useEffect(() => {
+         getCharacterList(setCharacterList)
      }, [])
 
     const showCharacters = () => {
